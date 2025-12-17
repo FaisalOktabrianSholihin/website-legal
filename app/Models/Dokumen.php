@@ -15,7 +15,7 @@ class Dokumen extends Model
 
 
     protected $fillable = [
-        'jenis_dokumen_id',
+        'jenis_id',
         'status_id',
         'no_dokumen',
         'nama_dokumen',
@@ -38,7 +38,7 @@ class Dokumen extends Model
 
     public function jenis(): BelongsTo
     {
-        return $this->belongsTo(JenisDokumen::class, 'jenis_dokumen_id');
+        return $this->belongsTo(JenisDokumen::class, 'jenis_id');
     }
 
 

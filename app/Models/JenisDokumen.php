@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class JenisDokumen extends Model
 {
-    protected $table = 'jenis_dokumen';
+    protected $table = 'jenis';
 
 
     protected $fillable = [
@@ -20,6 +20,6 @@ class JenisDokumen extends Model
 
     public function dokumen(): HasMany
     {
-        return $this->hasMany(Dokumen::class, 'jenis_dokumen_id');
+        return $this->hasMany(Dokumen::class, 'jenis_id');
     }
 }
