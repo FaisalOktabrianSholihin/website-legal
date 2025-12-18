@@ -24,6 +24,12 @@ class DokumenResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Dokumen';
 
+    protected static ?string $navigationLabel = 'Dokumen';
+
+    protected static ?string $modelLabel = 'Dokumen';
+
+    protected static ?string $pluralModelLabel = 'Data Dokumen';
+
     public static function form(Schema $schema): Schema
     {
         return DokumenForm::configure($schema);
@@ -34,6 +40,7 @@ class DokumenResource extends Resource
         return [
             NavigationItem::make('Legal')
                 ->group('Dokumen')
+                // ->label('Jenis Kunjungan')
                 ->icon('heroicon-o-scale')
                 ->url(fn() => static::getUrl() . '?jenis=legal'),
 
