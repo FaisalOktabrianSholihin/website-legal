@@ -65,8 +65,8 @@ class DokumenResource extends Resource
     {
         return [
             'index' => ListDokumens::route('/'),
-            'create' => CreateDokumen::route('/create'),
-            'edit' => EditDokumen::route('/{record}/edit'),
+            // 'create' => CreateDokumen::route('/create'),
+            // 'edit' => EditDokumen::route('/{record}/edit'),
         ];
     }
 }
