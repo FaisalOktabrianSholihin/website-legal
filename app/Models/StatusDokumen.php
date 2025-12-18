@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class StatusDokumen extends Model
 {
-    protected $table = 'status_dokumen';
+    protected $table = 'status';
 
 
     protected $fillable = [

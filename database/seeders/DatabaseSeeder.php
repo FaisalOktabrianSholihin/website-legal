@@ -22,8 +22,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        User::factory()->create([
+            'name' => 'Super Admin',
+            'email' => 'superadmin@gmail.com',
+            'password' => bcrypt('abc1234'),
+        ]);
         $this->call([
             JenisDokumenSeeder::class,
+            StatusDokumenSeeder::class,
         ]);
     }
 }
